@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecommerce Product Recommendation using Machine Learning</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+<style>/* COUNTER */
+  #counter {
+      background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url("https://img.freepik.com/free-photo/laptop-blank-screen-hopping-cart-full-gifts-with-copyspace-online-shopping-concept_1423-92.jpg?size=626&ext=jpg&ga=GA1.1.1830621147.1700582311&semt=ais");
+      background-position: center;
+      background-size: cover;
+  }</style>
+  
+  <script>
+
+function login() {
+
+    var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+
+      var validCredentials = {
+        "madhavi.cse@nsrit.edu.in":"madhavi",
+        "20nu1a4408@nsrit.edu.in": "jay",
+        "20nu1a4419@nsrit.edu.in": "seshu",
+        "20nu1a4412@nsrit.edu.in": "yogesh",
+        "20nu1a4411@nsrit.edu.in": "siddu"
+      };
+
+
+      if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+        alert("Login successful!");
+        window.location.href='dashboard.html';
+
+    } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <b style="color:rgba(110, 16, 153, 0.944);">Ecommerce Product Recommendation System</b>  </a> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <!-- LOGIN -->
+  <section class="section-padding bg-light" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="section-title">
+            <h3 style="color:rgb(234, 16, 179);"class="display-4 text- fw-bold">TECHIES</h3>
+            <h1 class="display-4 text-white fw-semibold">Login with Username and Password</h1>
+            <div class="line bg-white"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+        <div class="col-lg-4">
+          <form class="row g-3 p-lg-5 p-4 bg- theme-shadow">
+            <div class="form-group col-lg-12">
+              <input type="text" id="username" class="form-control" placeholder="Enter username">
+            </div>
+            <div class="form-group col-lg-12">
+              <input type="password" id="password" class="form-control" placeholder="Enter password">
+            </div>
+            <div class="form-group col-lg-12 d-grid">
+              <button type="button" class="btn btn-brand" onclick="login()">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-<!-- CONTACT -->
+  <section class="section-padding bg-success" id="counter">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="section-title">
+            <h1 class="display-4 text- fw-bold">Get in touch</h1>
+            <div class="line bg-white"></div>
+            <p class="text-bg-success fw-semibold">I'm always happy to connect</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+        <div class="col-lg-8">
+          <form action="#" class="row g-3 p-lg-5 p-4 bg- theme-shadow">
+            <div class="form-group col-lg-6">
+              <input type="text" class="form-control" placeholder="Enter first name">
+            </div>
+            <div class="form-group col-lg-6">
+              <input type="text" class="form-control" placeholder="Enter last name">
+            </div>
+            <div class="form-group col-lg-12">
+              <input type="email" class="form-control" placeholder="Enter Email address">
+            </div>
+            <div class="form-group col-lg-12">
+              <input type="text" class="form-control" placeholder="Enter subject">
+            </div>
+            <div class="form-group col-lg-12">
+              <textarea name="message" rows="5" class="form-control" placeholder="Enter Message"></textarea>
+            </div>
+            <div class="form-group col-lg-12 d-grid">
+              <button class="btn btn-brand">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-info">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-3 col-sm-6">
+            <h5 style="color:darkorchid;" class="mb-0 text- fw-bold">TECHIES</h5>
+            <div class="line"></div>
+            <p class="text-white fw-semibold">Transforming experiences with AI recommendations. Your personalized AI companion.</p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="https://github.com/jayaprakash3317"><i class="ri-github-fill"></i></a>
+              <a href="https://www.linkedin.com/in/jayaprakash-gedela-41a689228/"><i class="ri-linkedin-fill"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-">SERVICES</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#" class="text-white fw-semibold">Personalized Recommendations</a></li>
+              <li><a href="#"class="text-white fw-semibold">Power BI</a></li>
+              <li><a href="#"class="text-white fw-semibold">Data Science</a></li>
+              <li><a href="#"class="text-white fw-semibold">AI-Machine Learning</a></li>
+              <li><a href="#"class="text-white fw-semibold">Data Analysis</a></li>
+              <li><a href="#"class="text-white fw-semibold">Innovation Solutions</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-">ABOUT</h5>
+            <div class="line"></div>
+            <ul>
+              <li><a href="#"class="text-white fw-semibold">Blog</a></li>
+              <li><a href="#"class="text-white fw-semibold">Services</a></li>
+              <li><a href="#"class="text-white fw-semibold">Team</a></li>
+              <li><a href="#"class="text-white fw-semibold">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="mb-0 text-">CONTACT</h5>
+            <div class="line"></div>
+            <ul>
+              <li class="text-white fw-semibold">Visakhapatnam, Andhra Pradesh</li>
+              <li class="text-white fw-semibold">+91 9133792138</li>
+              <li class="text-white fw-semibold">jayaprakash317@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-auto">
+            <p class="text-bg-light fw-semibold"class="mb-0"> TECHIES - An Unique Solutions</p>
+          </div>
+          <div class="col-auto">
+            <p style="color:darkorchid;"class="text- fw-semibold ri-emotion-happy-fill"class="mb-0">   Designed  By Jayaprakash Gedela</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
